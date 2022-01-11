@@ -12,30 +12,32 @@ vertButton.addEventListener("click", function(){
     console.log('vert')
 })
 
+function createUserMessage(champs, titre) {
+    let p = document.createElement('p');
+    let valeur = document.getElementById(champs).value;
+    p.setAttribute('id', `${champs}Message`)
+    p.innerText = titre;
+    p.innerText += ': ';
+    p.innerText += valeur;
+    return p
+}
+
 function userFormSubmitted(ev) {
     ev.preventDefault();
 
-    let usernameInput = document.getElementById('username');
-
-
     let userForm = ev.target;
-
-    let userFormMessages = document.createElement('div');
-    userFormMessages.setAttribute('id', 'userFormMessages');
 
     if (document.getElementById('userFormMessages')) {
         document.getElementById('userFormMessages').remove();
     }
 
-    let usernameOutput = document.createElement('p');
-    usernameOutput.innerText = 'Votre nom d\'utilisateur: ';
-    usernameOutput.innerText += usernameInput.value;
+    let userFormMessages = document.createElement('div');
+    userFormMessages.setAttribute('id', 'userFormMessages');
 
-    userFormMessages.prepend(usernameOutput);
+    userFormMessages.append(createUserMessage('username', 'Votre nom d\'utilisateur'));
+    userFormMessages.append(createUserMessage('email', 'Votre adresse e-mail'));
+
     userForm.append(userFormMessages);
-
-    // usernameOutput.innerText = usernameInput.value;
-
 }
 
 let userForm = document.getElementById('userForm');
