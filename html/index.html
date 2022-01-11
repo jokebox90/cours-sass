@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision HTML et CSS</title>
+   <link rel="stylesheet" href="../css/styles.css" >
+   <!-- <script src="../js/revision.js" >
+   </script> -->
+   <script src="../js/dom.js" async></script>
+   <script src="../js/formulaires.js" async></script>
+</head>
+<body>
+    <header>
+        <h1>1- Revision HTML et CSS:</h1>
+        <p>
+            Ceci est un paragraphe, on utilise la balise <strong>p</strong>
+        </p>
+        <img style="width: 100%;" src="https://www.startinop.com/wp-content/uploads/2020/11/html-css-js.jpg" alt="HTML, CSS et Javascript logos" >
+
+        <div id="liens_doc" >
+            <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="blank" class="html">
+               Documentation HTML
+            </a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="blank" class="css">
+                Documentation CSS
+            </a>
+        </div>
+
+        <div id="liens_page">
+            <a href="#sections">
+                1.1/ Les sections
+            </a>
+            <a href="#selecteurs">
+                1.2/ Les selecteurs
+            </a>
+            <a href="#selecteurs">
+                1.3/ Les boutons
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <p>Le main correspond au contenus princpale de la page. On utilise la balise <strong class="html">main</strong></p>
+
+        <section id="sections" >
+            <h2>1.1/ Les sections:</h2>
+            <p>Nous pouvos séparer notre page en plusisuers section, avec la balise <strong class="html">section</strong></p>
+            <p>On peut avoir multiple elements dans un section.</p>
+        </section>
+
+        <section id="selecteurs" >
+            <h2>1.2/ Les selecteurs:</h2>
+            <p>Il existe plusieurs manière de ciblé un element en css:</p>
+            <ul>
+                <li>
+                    Par balise: <strong class="css">h1</strong> ou <strong  class="css">div</strong>
+                </li>
+                <li>
+                    Par classe: <strong  class="css">.html</strong> ou <strong  class="css">.css</strong>
+                </li>
+                <li>
+                    Par identifiant: <strong  class="css">#liens_doc</strong> ou <strong  class="css">#liens_page</strong>
+                </li>
+                <li>
+                    Par descendant: <strong  class="css">main section</strong> ou <strong  class="css">p strong</strong>
+                </li>
+                <li>
+                    Par balise et classe: <strong class="css" >strong.html</strong>
+                </li>
+            </ul>
+        </section>
+
+        <section id="boutons" >
+            <h2>1.3/ Les boutons:</h2>
+            <p>Les boutons sont créer avec la balise <strong class="html" >button</strong></p>
+            <p>Il permettent d'executer des fonctions Javascript</p>
+            <button onclick="sayHello()" ><span>Clique</span></button>
+            <button id="orange" class="button_orange">Orange</button>
+            <button id="vert" class="button_green" >Vert</button>
+        </section>
+
+        <section id="forms">
+            <h2>1.4/ Les formulaires:</h2>
+            <p>Les formulaires permettent de regrouper un ensemble d'inputs <strong class="html">form</strong></p>
+            <p>Les inputs permettent de lire des entrées de l'utilisateur
+            <strong class="html">input</strong>
+            </p>
+
+            <form id="userForm">
+                <div class="inputs">
+                    <label for="username" >Votre nom d'utilisateur:</label>
+                    <input id="username" name="username" placeholder="Saisir un nom d'utilisateur" type="text">
+                </div>
+
+                <div class="inputs">
+                    <label for="email" >Votre Email:</label>
+                    <input name="email" placeholder="Email" type="email" >
+                </div>
+
+                <div class="inputs">
+                    <label for="password" >Votre mot de passe:</label>
+                    <input name="password" placeholder="Mot de passe" type="password">
+                </div>
+
+                <div class="inputs select">
+                    <label for="fruits" >Votre fruit</label>
+                    <select id="fruits" name="fruits">
+                        <option name="fruits" value="banane" >Banane</option>
+                        <option name="fruits" value="pomme">Pomme</option>
+                        <option name="fruits" value="orange">Orange</option>
+                    </select>
+                </div>
+
+                <div class="inputs checkboxes">
+                    <span id="inputTitle">Vos langages</span>
+
+                    <div class="checkbox">
+                        <label for='html' >HTML</label>
+                        <input id="checkHtml" name="html" type="checkbox" checked >
+                    </div>
+
+                    <div class="checkbox">
+                        <label for='css' >CSS</label>
+                        <input id="checkCss" name="css" type="checkbox" >
+                    </div>
+
+                    <div class="checkbox">
+                        <label for='js' >Javascript</label>
+                        <input id="checkJs" name="js" type="checkbox" >
+                    </div>
+                </div>
+
+                <div class="inputs">
+                    <label for='date'>Date de naissance:</label>
+                    <input id="date" name="date" type="date" >
+                </div>
+
+                <div class="inputs textarea">
+                    <label for="question">Votre question:</label>
+                    <textarea placeholder="Votre question..." rows="10"></textarea>
+                </div>
+
+                <button id="userFormSubmit" class="button submit" type="submit">Enregistrer</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Changer le style de l'input:
+    - Bordure bottom.
+    - CHanger la couleur de la bordure quand on est entrain de taper dans l'input. -->
+
+    <footer>
+        <p>Je suis un footer</p>
+    </footer>
+
+
+</body>
+
+</html>

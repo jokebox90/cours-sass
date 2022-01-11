@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+}
+h1{
+    margin: 10px;
+    color:royalblue;
+}
+
+a{
+    padding: 10px;
+    color: green;
+}
+
+.html{
+    color:#F0662B;
+}
+
+.css{
+    color:royalblue
+}
+
+#liens_doc{
+    background-color: rgb(216, 216, 216);
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-around
+}
+#liens_page{
+    background-color: rgb(227, 241, 218);
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid rgb(115, 182, 113);
+    display: flex;
+    justify-content: space-around
+}
+main{
+    padding: 15px;
+}
+
+p strong{
+    border-bottom: 1px solid gray;
+}
+
+main section, footer{
+    background-color: rgb(226, 226, 226);
+    margin: 20px;
+    padding: 10px;
+}
+
+strong.html{
+    color: red;
+}
+
+strong.html::before{
+    content:"< "
+}
+strong.html::after{
+    content:" >"
+}
+
+.inputs {
+    display: flex;
+    flex-flow: row;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.inputs.textarea,
+.inputs.select,
+.inputs.checkboxes {
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.inputs label {
+    width: 33%;
+}
+
+.inputs.checkboxes .checkbox {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.inputs.checkboxes {
+    padding: 15px;
+    border: 2px solid #666;
+}
+
+.inputs.checkboxes .checkbox label {
+    width: 33%;
+}
+
+.inputs.select select {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.inputs.select select,
+.inputs input {
+    height: 2.2em;
+    line-height: 2.2em;
+    background-color: white;
+    border: 2px solid #666;
+}
+
+.inputs.textarea textarea {
+    resize: none;
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+    background-color: white;
+    border: 2px solid #666;
+}
+
+.button.submit {
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    color: white;
+    background-color: green;
+    border: 2px solid limegreen;
+}
+
+
