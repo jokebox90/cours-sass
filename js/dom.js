@@ -27,7 +27,7 @@ function createSection(title, listeTexts){
     let newH2 = document.createElement('h2')
     //Modifier ajoute le texte de h2
     newH2.innerText = title
-    newSection.append(newH2); 
+    newSection.append(newH2);
 
     listeTexts.forEach( (element)=>{
     //Créer deux element p et modification de texte
@@ -38,25 +38,29 @@ function createSection(title, listeTexts){
     main.append(newSection)
 }
 
-createSection("1.5/ Javascript", [ 
-    "Pour selectionner un élément en Javascript on utilise principalement le fonction <strong>document.querySelectorAll()</strong>.",
-    "Pour créer un élément en Javascript on utilise la fonction <strong>document.createElement()</strong> ."])
-createSection("1.6/ Test", ['exemple', "test", "ttttt"])
+// createSection("1.5/ Javascript", [
+//     "Pour selectionner un élément en Javascript on utilise principalement le fonction <strong>document.querySelectorAll()</strong>.",
+//     "Pour créer un élément en Javascript on utilise la fonction <strong>document.createElement()</strong> ."])
+// createSection("1.6/ Test", ['exemple', "test", "ttttt"])
 
 function getAllH1() {
     return document.querySelectorAll('h1');
 }
+
 function getAllH2() {
     return document.querySelectorAll('h2');
 }
+
 function getAllP() {
     return document.querySelectorAll('p');
 }
+
 function setGreen(el) {
     el.style.color="green";
     el.style.borderBottom="1px solid green"
     el.style.margin = "10px 0 20px 0"
 }
+
 function setRed(el) {
     el.style.color="red";
     el.style.borderBottom="1px solid red"
