@@ -1,6 +1,7 @@
 *{
     margin: 0;
 }
+
 h1{
     margin: 10px;
     color:royalblue;
@@ -125,4 +126,14 @@ strong.html::after{
     border: 2px solid limegreen;
 }
 
-
+#displayBox {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: rgba(102, 102, 102, 0.8);
+}
