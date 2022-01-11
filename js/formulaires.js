@@ -12,23 +12,31 @@ vertButton.addEventListener("click", function(){
     console.log('vert')
 })
 
-let form = document.querySelector("form")
-form.addEventListener("submit", function(event){
-    event.preventDefault();
+function userFormSubmitted(ev) {
+    ev.preventDefault();
 
-    let usernameInput = document.querySelector("#username");
-    console.log(usernameInput.value);
+    let usernameInput = document.getElementById('username');
 
-    let selectFruits = document.querySelector('#fruits')
-    console.log(selectFruits.value)
 
-    let checkHtml = document.querySelectorAll('#checkHtml')
-    console.log(checkHtml)
+    let userForm = ev.target;
 
-    let checkCss = document.querySelectorAll('#checkCss')
-    console.log(checkCss)
+    let userFormMessages = document.createElement('div');
+    userFormMessages.setAttribute('id', 'userFormMessages');
 
-    let date = document.querySelector("#date")
-    console.log(date.value)
-    
-})
+    if (document.getElementById('userFormMessages')) {
+        document.getElementById('userFormMessages').remove();
+    }
+
+    let usernameOutput = document.createElement('p');
+    usernameOutput.innerText = 'Votre nom d\'utilisateur: ';
+    usernameOutput.innerText += usernameInput.value;
+
+    userFormMessages.prepend(usernameOutput);
+    userForm.append(userFormMessages);
+
+    // usernameOutput.innerText = usernameInput.value;
+
+}
+
+let userForm = document.getElementById('userForm');
+userForm.addEventListener('submit', userFormSubmitted);
