@@ -31,8 +31,3 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-#squareContent {
-    display: flex;
-    flex-direction: column;
-}
